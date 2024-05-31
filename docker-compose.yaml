@@ -1,0 +1,16 @@
+name: site--astro
+
+services:
+  server:
+    image: node:lts-slim
+    working_dir: /usr/share/app
+    volumes:
+      - .:/usr/share/app
+    ports:
+      - 4321:4321
+    entrypoint:
+      - npm
+      - run
+      - dev
+      - --
+      - --host
