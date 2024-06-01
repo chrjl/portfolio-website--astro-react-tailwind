@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header';
+import Card from '../components/Card';
+
 const allStubs = await getCollection('stubs');
 allStubs.sort((a, b) => a.data.order - b.data.order);
 
@@ -11,4 +13,16 @@ const pageTitle = 'Christopher Lee | Astro';
 
 <BaseLayout pageTitle={pageTitle}>
   <Header />
+
+  <div class="mt-16">
+    {
+      allStubs.map((stub) => (
+        <Card
+          title={stub.data.title}
+          keywords={stub.data.keywords}
+          links={stub.data.links}
+        />
+      ))
+    }
+  </div>
 </BaseLayout>
