@@ -16,6 +16,7 @@
     "@fontsource-variable/inter": "^5.0.18",
     "@fontsource/arimo": "^5.0.20",
     "@fontsource/cousine": "^5.0.20",
+    "@heroicons/react": "^2.1.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.9.2",
