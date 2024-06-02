@@ -1,3 +1,5 @@
+import Markdown from 'react-markdown';
+
 import CardKeywords from './CardKeywords';
 import CardLinks from './CardLinks';
 import type { LinksType } from './CardLinks';
@@ -5,6 +7,7 @@ import type { LinksType } from './CardLinks';
 interface Props {
   title: string;
   keywords?: string[];
+  description?: string;
   links?: LinksType[];
 }
 
@@ -15,6 +18,12 @@ export default function Card({ title, keywords, description, links }: Props) {
         <h1 className="text-lg uppercase leading-snug underline">{title}</h1>
         {keywords && <CardKeywords keywords={keywords} />}
       </div>
+
+      {description && (
+        <div className="mt-8 text-sm font-content">
+          <Markdown>{description}</Markdown>
+        </div>
+      )}
 
       {links && (
         <div className="mt-8 group-hover:font-bold">
