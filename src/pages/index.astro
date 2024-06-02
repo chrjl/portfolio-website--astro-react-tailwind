@@ -5,8 +5,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header';
 import Card from '../components/Card';
 
-const allStubs = await getCollection('stubs');
-allStubs.sort((a, b) => a.data.order - b.data.order);
+const allPosts = await getCollection('posts');
+allPosts.sort((a, b) => a.data.order - b.data.order);
 
 const pageTitle = 'Christopher Lee | Astro';
 ---
@@ -16,7 +16,7 @@ const pageTitle = 'Christopher Lee | Astro';
 
   <div class="mt-16">
     {
-      allStubs.map((stub) => (
+      allPosts.map((stub) => (
         <Card
           title={stub.data.title}
           keywords={stub.data.keywords}
