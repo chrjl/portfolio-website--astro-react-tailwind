@@ -1,7 +1,11 @@
 import CardKeywords from './CardKeywords';
+import CardLinks from './CardLinks';
+import type { LinksType } from './CardLinks';
+
 interface Props {
   title: string;
   keywords?: string[];
+  links?: LinksType[];
 }
 
 export default function Card({ title, keywords, description, links }: Props) {
@@ -11,6 +15,12 @@ export default function Card({ title, keywords, description, links }: Props) {
         <h1 className="text-lg uppercase leading-snug underline">{title}</h1>
         {keywords && <CardKeywords keywords={keywords} />}
       </div>
+
+      {links && (
+        <div className="mt-8 group-hover:font-bold">
+          <CardLinks links={links} />
+        </div>
+      )}
     </div>
   );
 }
