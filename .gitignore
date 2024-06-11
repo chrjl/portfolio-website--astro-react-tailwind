@@ -21,3 +21,6 @@ pnpm-debug.log*
 .vscode/
 .idea/
 .DS_Store
+
+# content
+src/content/posts/
