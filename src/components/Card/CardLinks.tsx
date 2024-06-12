@@ -64,11 +64,11 @@ function IconLink({ icon, url, description }: IconLinkProps) {
     <div className="flex flex-row items-center">
       <span className="h-4 w-6 flex">{icon || iconMap.generic}</span>
       {description ? (
-        <a href={url} className="text-sm">
+        <a href={url} target="_blank" className="text-sm">
           {description}
         </a>
       ) : (
-        <a href={url} className="text-xs">
+        <a href={url} target="_blank" className="text-xs">
           {url}
         </a>
       )}

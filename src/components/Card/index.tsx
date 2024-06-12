@@ -20,7 +20,7 @@ export default function Card({ title, keywords, description, links }: Props) {
       </div>
 
       {description && (
-        <div className="mt-8 text-sm font-content">
+        <div className="mt-8 text-sm font-content group-hover:[&_a]:font-bold">
           <Markdown>{description}</Markdown>
         </div>
       )}
