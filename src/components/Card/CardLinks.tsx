@@ -20,7 +20,7 @@ const iconMap: { [type: string]: React.ReactNode } = {
 export interface LinksType {
   type: string;
   url: string;
-  description: string;
+  description?: string;
 }
 
 interface Props {
