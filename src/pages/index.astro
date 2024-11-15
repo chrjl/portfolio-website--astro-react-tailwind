@@ -1,18 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header';
 import Card from '../components/Card';
 
-const allPosts = await getCollection('posts');
+const allPosts = await Astro.glob('./posts/*.md');
 
 allPosts.sort((a, b) => {
-  if (a.data.order && b.data.order) {
-    return a.data.order - b.data.order;
-  } else if (a.data.order && !b.data.order) {
+  if (a.frontmatter.order && b.frontmatter.order) {
+    return a.frontmatter.order - b.frontmatter.order;
+  } else if (a.frontmatter.order && !b.frontmatter.order) {
     return -1;
-  } else if (!a.data.order && b.data.order) {
+  } else if (!a.frontmatter.order && b.frontmatter.order) {
     return 1;
   } else {
     return 0;
@@ -27,12 +25,12 @@ const pageTitle = 'Portfolio | Christopher Lee';
 
   <div class="mt-16">
     {
-      allPosts.map((stub) => (
+      allPosts.map((post) => (
         <Card
-          title={stub.data.title}
-          keywords={stub.data.keywords}
-          links={stub.data.links}
-          description={stub.data.description}
+          title={post.frontmatter.title}
+          keywords={post.frontmatter.keywords}
+          links={post.frontmatter.links}
+          description={post.frontmatter.description}
         />
       ))
     }
