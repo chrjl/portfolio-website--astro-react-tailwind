@@ -6,19 +6,7 @@ import metadata from './posts/_metadata.json';
 
 const allPosts = await Astro.glob('./posts/*.md');
 
-allPosts.sort((a, b) => {
-  if (a.frontmatter.order && b.frontmatter.order) {
-    return a.frontmatter.order - b.frontmatter.order;
-  } else if (a.frontmatter.order && !b.frontmatter.order) {
-    return -1;
-  } else if (!a.frontmatter.order && b.frontmatter.order) {
-    return 1;
-  } else {
-    return 0;
-  }
-});
-
-const pageTitle = 'Portfolio | Christopher Lee';
+const pageTitle = metadata.siteTitle;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -30,7 +18,7 @@ const pageTitle = 'Portfolio | Christopher Lee';
     links={metadata.links}
   />
 
-  <div class="mt-16">
+  <div class="mt-16 flex flex-col">
     {
       allPosts.map((post) => (
         <Card
@@ -38,6 +26,13 @@ const pageTitle = 'Portfolio | Christopher Lee';
           keywords={post.frontmatter.keywords}
           links={post.frontmatter.links}
           description={post.frontmatter.description}
+          className={
+            typeof post.frontmatter.order !== 'number'
+              ? 'order-last'
+              : post.frontmatter.order <= 0
+                ? 'order-first'
+                : `order-${post.frontmatter.order}`
+          }
         />
       ))
     }
