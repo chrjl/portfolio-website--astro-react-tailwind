@@ -1,0 +1,20 @@
+{
+  "siteTitle": "Site Title",
+  "title": "Title",
+  "subtitle": "Subtitle",
+  "subsubtitle": "Subsubtitle",
+  "description": "Description",
+  "links": [
+    {
+      "type": "GitHub",
+      "profile": "<github-profile>",
+      "url": "https://github.com/<github-profile>"
+    },
+    {
+      "type": "LinkedIn",
+      "profile": "<linkedin-profile>",
+      "url": "https://linkedin.com/in/<linkedin-profile>"
+    },
+    { "url": "https://example.com" }
+  ]
+}
