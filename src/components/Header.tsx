@@ -6,10 +6,10 @@ interface Props {
   subsubtitle: string;
   description: string;
   links: {
-    url?: string;
+    url: string;
     type?: string;
     profile?: string;
-  }[]
+  }[];
 }
 
 export default function Header({
@@ -49,12 +49,18 @@ export default function Header({
       <h2 className="mt-4 text-xl font-bold">{subtitle}</h2>
       <div className="mt-1 text-base font-medium">{subsubtitle}</div>
 
-      <h3 className="mt-4 text-sm flex flex-wrap justify-center">
-        {[description, ...linkElements].map((element, index) => (
-          <>
-            {index === 0 ? null : <span className="px-4">|</span>} {element}
-          </>
-        ))}
+      <h3 className="mt-4 text-sm flex flex-col justify-center items-center sm:hidden">
+        {[description, ...linkElements].filter(Boolean)}
+      </h3>
+
+      <h3 className="mt-4 text-sm flex justify-center items-center max-sm:hidden">
+        {[description, ...linkElements]
+          .filter(Boolean)
+          .map((element, index) => (
+            <>
+              {index === 0 ? null : <span className="px-4">|</span>} {element}
+            </>
+          ))}
       </h3>
     </header>
   );
