@@ -7,7 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
-        content: ['Arimo', ...defaultTheme.fontFamily.sans],
+        content: ['Arimo', 'Material Icons Outlined', ...defaultTheme.fontFamily.sans],
         mono: ['Cousine', ...defaultTheme.fontFamily.mono],
       },
     },
