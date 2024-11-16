@@ -2,13 +2,13 @@ import Markdown from 'react-markdown';
 
 import CardKeywords from './CardKeywords';
 import CardLinks from './CardLinks';
-import type { LinksType } from './CardLinks';
+import type { Link } from './CardLinks';
 
 interface Props {
   title: string;
   keywords?: string[];
   description?: string;
-  links?: LinksType[];
+  links?: Link[];
 }
 
 export default function Card({ title, keywords, description, links }: Props) {
