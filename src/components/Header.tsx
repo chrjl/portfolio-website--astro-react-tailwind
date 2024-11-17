@@ -50,14 +50,14 @@ export default function Header({
 
   return (
     <header className="my-8 flex flex-col items-center">
-      <h1 className="text-4xl font-extrabold">{title}</h1>
+      <h1 className="text-4xl font-extrabold text-center">{title}</h1>
 
       {subtitle ? (
-        <h2 className="mt-4 text-xl font-bold">{subtitle}</h2>
+        <h2 className="mt-4 text-xl font-bold text-center">{subtitle}</h2>
       ) : null}
 
       {subsubtitle ? (
-        <div className="mt-1 text-base font-medium">
+        <div className="mt-1 text-base font-medium text-center">
           {subsubtitle}
         </div>
       ) : null}
