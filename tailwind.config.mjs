@@ -13,4 +13,5 @@ export default {
     },
   },
   plugins: [],
+  safelist: [{pattern: /order-[1-9]/}]
 };
