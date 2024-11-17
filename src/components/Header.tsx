@@ -2,9 +2,9 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 interface Props {
   title: string;
-  subtitle?: string;
-  subsubtitle?: string;
-  description?: string;
+  subtitle?: string | null;
+  subsubtitle?: string | null;
+  description?: string | null;
   links?: {
     url: string;
     type?: string;
