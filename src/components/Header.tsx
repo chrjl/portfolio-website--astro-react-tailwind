@@ -25,7 +25,11 @@ export default function Header({
           return (
             <span className="flex items-center">
               <FaGithub />
-              <a className="pl-1" href={`https://github.com/${link.profile}`}>
+              <a
+                className="pl-1"
+                target="_blank"
+                href={`https://github.com/${link.profile}`}
+              >
                 {link.profile}
               </a>
             </span>
@@ -36,6 +40,7 @@ export default function Header({
               <FaLinkedin />
               <a
                 className="pl-1"
+                target="_blank"
                 href={`https://linkedin.com/in/${link.profile}`}
               >
                 {link.profile}
@@ -44,7 +49,11 @@ export default function Header({
           );
         }
 
-        return <a href={link.url}>{link.url}</a>;
+        return (
+          <a target="_blank" href={link.url}>
+            {link.url}
+          </a>
+        );
       })
     : [];
 

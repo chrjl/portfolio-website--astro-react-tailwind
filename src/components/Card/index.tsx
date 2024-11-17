@@ -1,4 +1,5 @@
 import Markdown from 'react-markdown';
+import rehypeExternalLinks from 'rehype-external-links';
 
 import CardKeywords from './CardKeywords';
 import CardLinks from './CardLinks';
@@ -30,7 +31,11 @@ export default function Card({
 
       {description && (
         <div className="mt-8 text-sm font-content group-hover:[&_a]:font-bold">
-          <Markdown>{description}</Markdown>
+          <Markdown
+            rehypePlugins={[[rehypeExternalLinks, { target: '_blank' }]]}
+          >
+            {description}
+          </Markdown>
         </div>
       )}
 
