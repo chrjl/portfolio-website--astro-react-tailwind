@@ -6,12 +6,24 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
-        content: ['Arimo', 'Material Icons Outlined', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'Inter Variable',
+          '"Font Awesome 6 Regular"',
+          '"Font Awesome 6 Free"',
+          '"Font Awesome 6 Brands"',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        content: [
+          'Arimo',
+          '"Font Awesome 6 Regular"',
+          '"Font Awesome 6 Free"',
+          '"Font Awesome 6 Brands"',
+          ...defaultTheme.fontFamily.sans,
+        ],
         mono: ['Cousine', ...defaultTheme.fontFamily.mono],
       },
     },
   },
   plugins: [],
-  safelist: [{pattern: /order-[1-9]/}]
+  safelist: [{ pattern: /order-[1-9]/ }],
 };
