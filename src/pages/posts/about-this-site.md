@@ -10,10 +10,10 @@ keywords:
 description: |
   Static blog site built on [Astro](https://astro.build) with React components and Tailwind CSS responsive layouts and styling.
 
-   [Asset link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)  
-   [Doc link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)  
-   [Code link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)  
-   [Generic link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)
+   [Asset link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)  
+   [Doc link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)  
+   [Code link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)  
+   [Generic link](https://github.com/chrjl/portfolio-website--astro-react-tailwind)
 
 links:
   - url: https://github.com/chrjl/portfolio-website--astro-react-tailwind

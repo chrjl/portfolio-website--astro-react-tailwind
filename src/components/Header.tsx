@@ -1,5 +1,3 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa6';
-
 interface Props {
   title: string;
   subtitle?: string | null;
@@ -24,7 +22,7 @@ export default function Header({
         if (link.type === 'GitHub') {
           return (
             <span className="flex items-center">
-              <FaGithub />
+              
               <a
                 className="pl-1"
                 target="_blank"
@@ -37,7 +35,7 @@ export default function Header({
         } else if (link.type === 'LinkedIn') {
           return (
             <span className="flex items-center">
-              <FaLinkedin />
+              
               <a
                 className="pl-1"
                 target="_blank"
