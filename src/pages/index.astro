@@ -22,10 +22,12 @@ const pageTitle = metadata.siteTitle;
     {
       allPosts.map((post) => (
         <Card
+          client:load
           title={post.frontmatter.title}
           keywords={post.frontmatter.keywords}
           links={post.frontmatter.links}
           description={post.frontmatter.description}
+          content={post.rawContent()}
           className={
             typeof post.frontmatter.order !== 'number'
               ? 'order-last'
